@@ -17,4 +17,5 @@ class AppColors {
   static const Color primaryColor = Color(0xFFfa5002);
   static const creamColor = Color.fromARGB(255, 246, 247, 248);
   static const Color blueColor = Color(0xFF185778);
+  static const Color cardColor = Color(0xfff8efea);
 }
