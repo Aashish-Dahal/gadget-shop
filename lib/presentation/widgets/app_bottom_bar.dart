@@ -93,16 +93,16 @@ class _AppBottomNavBArState extends State<AppBottomNavBAr> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.all(4.0),
-              child: Icon(Icons.shopping_cart),
+              child: Icon(Icons.assignment_turned_in_outlined),
             ),
             activeIcon: Padding(
               padding: EdgeInsets.all(4.0),
               child: Icon(
-                Icons.shopping_cart,
+                Icons.assignment_turned_in,
                 color: AppColors.primaryColor,
               ),
             ),
-            label: "Cart",
+            label: "Order",
             backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
