@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'
     show
         AppBar,
@@ -19,8 +18,9 @@ import 'package:flutter/material.dart'
         State,
         StatefulWidget,
         Widget;
+import 'package:jandj_customer/presentation/screen/my_order.dart';
+import 'package:jandj_customer/presentation/screen/profile.dart';
 
-import '../../config/app_theme/app_colors.dart';
 import '../widgets/app_bottom_bar.dart';
 import 'home_page/home.dart';
 
@@ -45,73 +45,23 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(136),
-        child: Stack(
-          children: [
-            SizedBox(
-              height: 131,
-              width: double.infinity,
-              child: ClipRRect(
-                borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(15),
-                    bottomRight: Radius.circular(15)),
-                child: AppBar(
-                  backgroundColor: AppColors.primaryColor,
-                  title: const Text("T Commerce"),
-                  actions: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.notifications),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.shopping_cart),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(),
-            Positioned(
-                top: 100,
-                left: 20,
-                right: 20,
-                child: Card(
-                  elevation: 8,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 10),
-                    child: Row(
-                      children: const [
-                        Icon(Icons.search),
-                        Text("Search your products")
-                      ],
-                    ),
-                  ),
-                )),
-          ],
-        ),
-      ),
-      body: SafeArea(
-        child: PageView.builder(
-          controller: _tabController,
-          physics: const NeverScrollableScrollPhysics(),
-          itemBuilder: (BuildContext context, int index) {
-            switch (index) {
-              case 0:
-                return const Home();
-              case 1:
-                return const Home();
-              case 2:
-                return const Home();
-              case 3:
-                return const Home();
-              default:
-                throw const FormatException('Page not found');
-            }
-          },
-        ),
+      body: PageView.builder(
+        controller: _tabController,
+        physics: const NeverScrollableScrollPhysics(),
+        itemBuilder: (BuildContext context, int index) {
+          switch (index) {
+            case 0:
+              return const Home();
+            case 1:
+              return const Home();
+            case 2:
+              return const MyOrder();
+            case 3:
+              return const ProfileScreen();
+            default:
+              throw const FormatException('Page not found');
+          }
+        },
       ),
       bottomNavigationBar: AppBottomNavBAr(tabController: _tabController),
     );
