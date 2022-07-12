@@ -18,6 +18,7 @@ import 'package:flutter/material.dart'
         State,
         StatefulWidget,
         Widget;
+import 'package:jandj_customer/presentation/screen/cart_screen.dart';
 import 'package:jandj_customer/presentation/screen/my_order.dart';
 import 'package:jandj_customer/presentation/screen/profile.dart';
 
@@ -25,7 +26,7 @@ import '../widgets/app_bottom_bar.dart';
 import 'home_page/home.dart';
 
 class HomeScreen extends StatefulWidget {
-  static const String routeName = "/";
+  static const String routeName = "/home";
 
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -53,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
             case 0:
               return const Home();
             case 1:
-              return const Home();
+              return const CartScreen();
             case 2:
               return const MyOrder();
             case 3:
