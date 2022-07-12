@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' show EdgeInsets;
+import 'package:intl/intl.dart' show NumberFormat;
 
 extension Merge on EdgeInsets {
   EdgeInsets merge(EdgeInsets? other) {
@@ -9,4 +10,9 @@ extension Merge on EdgeInsets {
       bottom: other?.bottom != 0 ? other?.bottom : bottom,
     );
   }
+}
+
+class Constants {
+  static NumberFormat formatter = NumberFormat.currency(
+      name: "Rs.", customPattern: "\u00A4\u00A0#,##,##0.00");
 }
