@@ -2,6 +2,7 @@ import 'package:flutter/material.dart'
     show
         AppBarTheme,
         BorderRadius,
+        BorderSide,
         Brightness,
         Colors,
         InputDecorationTheme,
@@ -40,26 +41,33 @@ class AppTheme {
               getRegularStyle(color: Colors.black, fontSize: FontSize.s14),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          isDense: true,
-          filled: true,
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(
-            8,
-          )),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(
-            8,
-          )),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(
-            8,
-          )),
-          errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(
-            8,
-          )),
-          fillColor: AppColors.primaryColor.withOpacity(.1),
-        ),
+            isDense: true,
+            filled: true,
+            border: OutlineInputBorder(
+                borderSide:
+                    const BorderSide(color: AppColors.borderColor, width: 2),
+                borderRadius: BorderRadius.circular(
+                  5,
+                )),
+            focusedBorder: OutlineInputBorder(
+                borderSide:
+                    const BorderSide(color: AppColors.borderColor, width: 2),
+                borderRadius: BorderRadius.circular(
+                  5,
+                )),
+            enabledBorder: OutlineInputBorder(
+                borderSide:
+                    const BorderSide(color: AppColors.borderColor, width: 2),
+                borderRadius: BorderRadius.circular(
+                  5,
+                )),
+            errorBorder: OutlineInputBorder(
+                borderSide:
+                    const BorderSide(color: AppColors.borderColor, width: 2),
+                borderRadius: BorderRadius.circular(
+                  5,
+                )),
+            fillColor: AppColors.fillColor),
         appBarTheme: AppBarTheme(
             elevation: 0,
             titleTextStyle:
