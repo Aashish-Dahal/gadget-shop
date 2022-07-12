@@ -8,4 +8,10 @@ class AppStrings {
   static const vehicles = "${imagePath}car.png";
   static const womanFashion = "${imagePath}woman.png";
   static const toy = "${imagePath}toy.png";
+  static const cart = "${imagePath}cart.png";
+  static const offers = "${imagePath}offers.png";
+  static const orders = "${imagePath}orders.png";
+  static const wishlist = "${imagePath}wishlist.png";
+  static const pp = "${imagePath}pp.jpg";
+  static const appLogo = "${imagePath}logo.png";
 }
